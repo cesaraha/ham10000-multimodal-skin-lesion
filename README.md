@@ -88,13 +88,13 @@ Full results:
 
 Key findings:
 - Adam won individually at 0.9199. Focal γ=2.0 won its group at 0.9176.
-- Combining both produced 0.9153 — worse than either individually.
+- Combining both produced 0.9153 - worse than either individually.
   This confirms the components interact rather than compound: Adam without
   weight decay has a specific optimisation dynamic that focal loss
   disrupts rather than complements.
 - Weighted cross-entropy severely underperformed (0.8367) due to loss
   scale inflation from aggressive inverse frequency weighting.
-- OneCycleLR destabilised training — the warmup phase interacted poorly
+- OneCycleLR destabilised training - the warmup phase interacted poorly
   with the small dataset size.
 
 ### Phase 4 — Multimodal Fusion
