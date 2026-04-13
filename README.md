@@ -45,13 +45,13 @@ highest clinical cost.
 
 ## Project Structure
 
-### Phase 1 — Data Analysis & Baseline
+### Phase 1: Data Analysis & Baseline
 - EDA revealing 67% class imbalance
 - Stratified 70/20/10 train/val/test split
 - Majority-class baseline: 67% accuracy, 0.50 AUROC
 - Establishes why macro AUROC is the correct metric
 
-### Phase 2 — Architecture Ablation
+### Phase 2: Architecture Ablation
 
 | Model | Description | Test AUROC |
 |---|---|---|
@@ -63,7 +63,7 @@ highest clinical cost.
 Selected: CNN-B. Equal AUROC to CNN-C at lower complexity.
 ViT-Tiny underperformed as expected - insufficient data for training without pretraining.
 
-### Phase 3 — Training Configuration
+### Phase 3: Training Configuration
 
 | Dimension | Winner | Notes |
 |---|---|---|
@@ -99,7 +99,7 @@ Key findings:
 - OneCycleLR destabilised training - the warmup phase interacted poorly
   with the small dataset size.
 
-### Phase 4 — Multimodal Fusion
+### Phase 4: Multimodal Fusion
 
 | Model | Test AUROC |
 |---|---|
@@ -119,7 +119,7 @@ Key findings:
 - **Cross-attention**: metadata queries attend to spatial image tokens
   at the pooling stage - spatially selective, best performer
 
-### Phase 5 — Interpretability & Calibration
+### Phase 5: Interpretability & Calibration
 - Grad-CAM heatmaps on final convolutional layer
 - Cross-attention weight visualisation
 - Reliability diagrams and ECE scores
