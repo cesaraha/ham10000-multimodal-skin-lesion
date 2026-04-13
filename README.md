@@ -1,3 +1,5 @@
+[![HuggingFace Model](https://img.shields.io/badge/HuggingFace-Model-yellow)](https://huggingface.co/cesaraha/ham10000-multimodal-skin-lesion)
+
 # HAM10000 Multimodal Skin Lesion Classification
 
 A multimodal deep learning system for dermoscopic skin lesion classification,
