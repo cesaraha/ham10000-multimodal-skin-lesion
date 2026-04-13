@@ -37,7 +37,7 @@ Accuracy is not used as the primary metric due to severe class imbalance
 | Nevi | 0.9156 | 0.9391 | +0.0236 |
 | Vascular | 0.9880 | 0.9771 | -0.0109 |
 
-The gain is concentrated in the malignant and pre-malignant classes —
+The gain is concentrated in the malignant and pre-malignant classes -
 most critically melanoma (+0.0312), where missed diagnoses carry the
 highest clinical cost.
 
@@ -59,7 +59,7 @@ highest clinical cost.
 | ViT-Tiny | Vision Transformer from scratch | 0.8980 |
 
 Selected: CNN-B. Equal AUROC to CNN-C at lower complexity.
-ViT-Tiny underperformed as expected — insufficient data for training without pretraining.
+ViT-Tiny underperformed as expected - insufficient data for training without pretraining.
 
 ### Phase 3 — Training Configuration
 
@@ -108,14 +108,14 @@ Key findings:
 | Late fusion | 0.9350 |
 | Cross-attention fusion | 0.9385 |
 
-- **Early fusion**: metadata injected at stem output — disrupts low-level
+- **Early fusion**: metadata injected at stem output - disrupts low-level
   feature learning, underperforms image-only
-- **Late fusion**: separate pipelines concatenated at classifier — simple
+- **Late fusion**: separate pipelines concatenated at classifier - simple
   and effective, beats image-only
-- **FiLM**: channel-wise affine modulation at intermediate layers —
+- **FiLM**: channel-wise affine modulation at intermediate layers -
   global modulation introduces noise, underperforms
 - **Cross-attention**: metadata queries attend to spatial image tokens
-  at the pooling stage — spatially selective, best performer
+  at the pooling stage - spatially selective, best performer
 
 ### Phase 5 — Interpretability & Calibration
 - Grad-CAM heatmaps on final convolutional layer
